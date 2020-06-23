@@ -44,7 +44,7 @@ def execute(sql):
         conn.commit()
         # 这里一定要写commit 不然提交的sql 都会被事务回滚
         return res
-    except Exception, e:
+    except Exception as e:
         logging.error("sql is empty or error %s" % e)
 
 

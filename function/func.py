@@ -60,8 +60,8 @@ class ApiTest:
 
             if actualCode != expectCode:
                 logging.info("FailCase %s", testName)
-                print "FailureInfo"
-                print failResults
+                print("FailureInfo")
+                print(failResults)
                 fail += 1
             else:
                 logging.info("Number %s", testNumber)

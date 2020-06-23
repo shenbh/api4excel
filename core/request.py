@@ -21,7 +21,7 @@ def change_type(value):
         if isinstance(eval(value), dict):
             result = eval(json.dumps(value))
             return result
-    except Exception, e:
+    except Exception as e:
         logging.error("类型问题 %s", e)
 
 
@@ -51,7 +51,7 @@ def api(method, url, data ,headers):
         response = results.json()
         code = response.get("code")
         return code
-    except Exception, e:
+    except Exception as e:
         logging.error("service is error", e)
 
 
@@ -79,5 +79,5 @@ def content(method, url, data, headers):
         result = response.get("result")
         content = {"message": message, "result": result}
         return content
-    except Exception, e:
+    except Exception as e:
         logging.error("请求失败 %s" % e)

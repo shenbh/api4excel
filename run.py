@@ -12,7 +12,8 @@ logging = log.get_logger()
 """1.外部输入参数"""
 
 module = 'user'
-url = 'http://127.0.0.1:8080'
+# url = 'http://127.0.0.1:8080'
+url = 'https://api.github.com'
 
 """2.根据module获取Sheet"""
 logging.info("-------------- Execute TestCases ---------------")
